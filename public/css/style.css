@@ -47,7 +47,6 @@ Author: Cloud Software Solution Ltd.
     font-size               : 56px;
     line-height             : 1;
     font-weight             : bold;
-    text-transform          : capitalize;
     margin                  : 30px 0 20px;
     -webkit-animation-delay : 150ms;
     animation-delay         : 150ms;
@@ -235,7 +234,7 @@ OUR SERVICES SECTION
 }
 
 .service-home .content-row {
-  margin-top: 154px;
+  margin-top: 70px;
 }
 
 .service-home .readmore {
@@ -666,12 +665,11 @@ span.count-description:before {
   position: absolute;
   left: 0;
   top: 0;
-  content: "\e01d";
   font-family: Flaticon;
   font-size: 100px;
   line-height: 70px;
   float: left;
-  color: #65d3e3;
+  color: #ffffff;
   margin-right: 10px;
 }
 
