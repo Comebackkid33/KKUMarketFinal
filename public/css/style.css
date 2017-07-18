@@ -241,14 +241,16 @@ OUR SERVICES SECTION
   display: inline-block;
   margin-top: 10px;
 }
-
+.navBtn {
+    cursor: pointer;
+}
 
 /*home2*/
 
 .service-home2{
   margin-bottom: 0px !important;
   padding-top: 120px !important;
-  padding-bottom: 120px !important;
+
   background: #f5f6f8 url(http://192.168.1.249/css/wordpress/unship/dev/unship/wp-content/uploads/2015/05/block-img1.jpg?id=2459) !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
