@@ -354,7 +354,7 @@ Form Style
 }
 
 .form-control:focus {
-  border-color: #65d3e3;
+  border-color: #c30000;
   box-shadow: none;
 }
 
@@ -581,8 +581,8 @@ SECTION
 }
 
 .section-sub {
-  font-size: 18px;
-  line-height: 30px;
+
+
   display: inline-block;
   position: relative;
 }
