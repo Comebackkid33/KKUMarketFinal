@@ -45,8 +45,10 @@
   <![endif]-->
   <!-- jQuery -->
   <script src="js/jquery.js"></script>
+  <script src="js/KKUScript.js"></script>
   <!-- Scroll script -->
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+
 </head>
 
 
@@ -70,36 +72,13 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <!-- Home <button type="button" id="aboutBtn" class="btn btn-default">Default button</button> -->
-                <li>
+                <li><a class="navBtn"  id="advantageBtn">Преимущества<span class=""></span></a></li>
+                <li ><a class="navBtn"  id="aboutBtn">О нас <span class=""></span></a></li>
+                <li ><a  class="navBtn" id="fractionBtn" >Фракции <span class=""></span></a></li>
+                <li ><a  class="navBtn" id="bagBtn" >Щебень в мешках  <span class=""></span></a></li>
+                <li ><a  class="navBtn" id="stackBtn" >Щебень в навалом  <span class=""></span></a></li>
+                <li ><a  class="navBtn" id="taskBtn" >Задачи  <span class=""></span></a></li>
 
-                  <a class="navBtn"  id="advantageBtn">Преимущества<span class=""></span></a>
-                </li>
-
-                <script>
-
-                    $("#advantageBtn").click(function() {
-                        $('html,body').animate({
-                                scrollTop: $("#advantage").offset().top},
-                            'slow');
-                    });
-                </script>
-                <!-- /Home -->
-
-                <!-- Pages -->
-                <li ><a class="navBtn"  id="aboutBtn">О нас <span class=""></span></a>
-
-                </li>
-                <script>
-                    $("#aboutBtn").click(function() {
-                        $('html,body').animate({
-                                scrollTop: $("#about").offset().top},
-                            'slow');
-                    });
-                </script>
-
-                <!-- Blog -->
-                <li ><a  class="navBtn" href="/">Блок3 <span class=""></span></a>
-                </li>
 
 
               </ul>
@@ -150,8 +129,8 @@
 
                 <h1 class="animated bounceIn">Щебень в мешках – чистота на участке и экономия при строительстве</h1>
 
+                <a  class="btn btn-primary animated bounceIn navBtn" id="bagBtn" >Щебень в мешках  <span class=""></span></a>
 
-                <a class="btn btn-primary animated bounceIn" href="#">Подробнее</a>
               </div>
               <!--.carousel-caption-->
             </div>
@@ -254,6 +233,9 @@
           </div> <!-- /.row --><!-- /.row -->
         </div><!-- /.container -->
       </section>
+
+
+
       <!-- services end -->
       <section class="service-home service-home2 section-padding  " id="about">
         <div class="container">
@@ -328,7 +310,7 @@
 
       <!-- services end -->
 
-      <section class="service-home service-home2 section-padding" id="about">
+      <section class="service-home service-home2 section-padding" id="fraction">
         <div class="container">
           <div class="row">
             <div class="col-xs-12 text-center">
@@ -426,41 +408,200 @@
 
       </section>
       <!-- featuer-section start -->
-      <section class="feature-section section-padding">
+      <section class="feature-section section-padding" id="bag" style="background: #ebefee;color: #606676">
         <div class="container">
           <div class="row">
-            <div class="col-sm-7 col-xs-12">
-              <h2>Тут будет секция про доставку мешков </h2>
+            <h2 style="background: #ebefee; color: #606676" class="text-center"><b >Продаем щебень в мешках для строительных работ и благоустройства территорий</b> </h2>
 
-              <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <div class="col-md-5">
+              <img src="img/щебень-в-мешках.jpg" alt="">
+              <h4>Щебень в мешках это -
+                <br><span class="glyphicon glyphicon-ok"></span>	Чистота на участке
+                <br><span class="glyphicon glyphicon-ok"></span>	Отсутствие потерь от хранения на земле
+                <br><span class="glyphicon glyphicon-ok"></span>	Всегда точный объем и масса
+                <br><span class="glyphicon glyphicon-ok"></span>	Разгрузка в удобное для заказчика место
+                <br><span class="glyphicon glyphicon-ok"></span>	Экономия времени и затрат при строительстве
+                <br><span class="glyphicon glyphicon-ok"></span>	Гарантия качества товара
+              </h4>
 
-              <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+            </div><!-- /.col-md-6 -->
 
-              <a href="#" class="btn btn-primary">View Details</a>
+            <div class="col-md-7 content-text">
+              <h3>Оформите online заказ на нашем сайте прямо сейчас!</h3>
+              <p>Заполните форму и в течении 10 минут с Вами свяжется наш менеджер для подтверждения заказа.</p>
+
+              <!--send Form-->
+              <form>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="bagInputName">Как Вас зовут</label>
+                      <input type="text" class="form-control" id="bagInputName" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="bagInputPhone">Ваш телефон*</label>
+                      <input type="text" class="form-control" id="bagInputPhone" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="bagInputFraction">Выберите фракцию</label>
+                      <select class="form-control" id="bagInputFraction" >
+                        <option value="5 (3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
+                        <option value="20 - 40 мм М400">фракция 20 - 40мм М400</option>
+                        <option value="40 - 70мм М400">фракция 40 - 70мм М400</option>
+                        <option value="5(3) - 10мм М300">фракция 5(3) - 10мм М300</option>
+                        <option value="5(3) - 20мм М300">фракция 5(3) - 20мм М300</option>
+                        <option value="20 - 40мм М300">фракция 20 - 40мм М300</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="bagInputCount">Количество мешков по 50кг</label>
+                      <input type="text" class="form-control" id="bagInputCount" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <div class="col-lg-7">
+                        <label for="resBag">Стоимость вашего заказа составляет:</label>
+                      </div>
+                      <div class="col-lg-5">
+                        <p id="resBag" >Введите количество мешков</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group submit-btn pagination-centered text-center">
+                  <button type="submit" class="btn btn-primary">Оформить заказ!</button>
+                </div>
+
+
+              </form>
+
+              <p>Наши работники <b>бесплатно</b> загрузят мешки с щебнем к Вам в автомобиль. Стоимость доставки автотранспортом компании уточняйте у менеджера.</p>
+
+            </div>
+
             </div>
 
           </div>
-        </div>
       </section>
       <!-- featuer-section end -->
-      <section class="feature-section section-padding" style="background:#f5f6f8; color: #606676">
+      <section class="feature-section section-padding" style="background:white; color: #606676" id="stack">
         <div class="container">
           <div class="row">
-            <div class="col-sm-7 col-xs-12">
-              <h2 style="background:#f5f6f8; color: #606676">Тут будет секция про Щебень навалом </h2>
+            <h2 style="background:white; color: #606676" class="text-center"><b >Щебень навалом для строительных работ и благоустройства территорий</b> </h2>
 
-              <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+            <div class="col-md-6">
+              <img src="img/щебень навалом.jpg" alt="">
 
-              <p>Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi. Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam, ut aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+            </div><!-- /.col-md-6 -->
 
-              <a href="#" class="btn btn-primary">View Details</a>
+            <div class="col-md-6 content-text">
+              <h3>Оформите online заказ на нашем сайте прямо сейчас!</h3>
+              <p>Заполните форму и в течении 10 минут с Вами свяжется наш менеджер для подтверждения заказа.</p>
+
+              <!--send Form-->
+              <form>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="stackInputName">Как Вас зовут</label>
+                      <input type="text" class="form-control" id="stackInputName" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="stackInputPhone">Ваш телефон*</label>
+                      <input type="text" class="form-control" id="stackInputPhone" placeholder="">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="stackInputFraction">Выберите фракцию</label>
+                      <select class="form-control" id="stackInputFraction" >
+                        <option value="5 (3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
+                        <option value="20 - 40 мм М400">фракция 20 - 40мм М400</option>
+                        <option value="40 - 70мм М400">фракция 40 - 70мм М400</option>
+                        <option value="5(3) - 10мм М300">фракция 5(3) - 10мм М300</option>
+                        <option value="5(3) - 20мм М300">фракция 5(3) - 20мм М300</option>
+                        <option value="20 - 40мм М300">фракция 20 - 40мм М300</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="stackInputCount">Количество тонн</label>
+                      <input type="text" class="form-control" id="stackInputCount" placeholder="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <label for="stackInputAdress">Выберите адрес доставки</label>
+                      <select class="form-control" id="stackInputAdress" >
+                        <option value="Самовывоз">Самовывоз</option>
+                        <option value="Ковров">Ковров</option>
+                        <option value="Ковров">Другое</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12">
+                    <div class="form-group">
+                      <div class="col-lg-7">
+                        <label for="resStack">Стоимость вашего заказа составляет:</label>
+                      </div>
+                      <div class="col-lg-5">
+                        <p id="restack" >Введите количество тонн</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-group submit-btn pagination-centered text-center">
+                  <button type="submit" class="btn btn-primary">Оформить заказ!</button>
+                </div>
+
+
+              </form>
+
             </div>
 
           </div>
+
         </div>
       </section>
       <!-- why-us-setion start -->
-      <section class="why-us-setion section-padding">
+      <section class="why-us-setion section-padding" id="task" style=" background: #f5f6f8">
         <div class="container">
           <div class="row text-center">
             <div class="col-xs-12">
@@ -469,7 +610,7 @@
             </div>
           </div> <!-- /.row -->
 
-          <div class="row content-row "   style="margin-top: 15px;"  >
+          <div class="row content-row "   style="margin-top: 15px; background: #f5f6f8"  >
             <div class="col-md-12">
               <div class="css-tab" role="tabpanel">
 
@@ -537,20 +678,6 @@
                       </div><!-- /.row -->
                     </div><!-- /.css-tab-content -->
                   </div>
-
-
-                  <script>
-                      $('input[name=dem]').change(function() {
-
-                          if( $("#lengthFun").val()!=0 && $("#widthFun").val()!=0 && $("#heightFun").val()!=0 ){
-
-                              var totalAmount = $('#lengthFun').val() * $('#widthFun').val() * $('#heightFun').val() * 0.35 * 0.0001 * 1.3;
-
-                              $('#resFun').text(Number((totalAmount).toFixed(2))+' т');
-                          }});
-                  </script>
-
-
 
 
                   <div role="tabpanel" class="tab-pane fade" id="trackable">
