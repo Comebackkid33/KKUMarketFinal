@@ -6,11 +6,15 @@ $(document).ready(function () {
     $(".navBtn").click(function() {
         var id = $(this).attr('id');
         id = id.slice(0,-3);
-        $('html,body').animate({
-                scrollTop: $("#"+id).offset().top},
-            'slow');
+        slide(id);
     });
-})
+});
+
+function slide(id){
+    $('html,body').animate({
+            scrollTop: $("#"+id).offset().top},
+        'slow');
+}
 
 //расчет фундамента
 $(document).ready(function () {
@@ -24,9 +28,47 @@ $(document).ready(function () {
                 $('#resFun').text('Некорректный ввод!');
             }
             else{
-                $('#resFun').text(Number((totalAmount).toFixed(2)) + ' т');
+                $('#resFun').text(Number((totalAmount).toFixed(2)));
             }
 
         }
     });
-})
+});
+
+//обработка кликов кнопок в задачах
+$(document).ready(function () {
+    $('.sendBagBtn').click(function () {
+
+        var resId = getResId($(this).attr('id'));
+        var resValue = $('#'+resId).text();
+        if(!isNaN(resValue)){
+            slide('bag');
+            $('#bagInputCount').val(Math.ceil(resValue/0.05));
+        }
+        else{
+            alert("Введите параметры для расчета");
+        }
+
+    })
+});
+
+function getResId( id ){
+    id = id.substr(id.length - 3);
+    return $('#res'+id).attr('id');
+}
+
+$(document).ready(function () {
+    $('.sendStackBtn').click(function () {
+
+        var resId = getResId($(this).attr('id'));
+        var resValue = $('#'+resId).text();
+        if(!isNaN(resValue)){
+            slide('stack');
+            $('#stackInputCount').val(resValue/0.05);
+        }
+        else{
+            alert("Введите параметры для расчета");
+        }
+
+    })
+});
