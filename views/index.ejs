@@ -112,7 +112,7 @@
 
                 <p class="lead animated lightSpeedIn">Продаем щебень для строительных работ и благоустройства территорий по самым доступным ценам</p>
 
-                <a class="btn btn-primary animated lightSpeedIn" href="#">Получить консультацию</a>
+                <a data-toggle="modal" data-target="#quoteModal" href="#" class="btn btn-primary animated lightSpeedIn">Получить консультацию</a>
               </div>
               <!--.carousel-caption-->
             </div>
@@ -605,7 +605,7 @@
         <div class="container">
           <div class="row text-center">
             <div class="col-xs-12">
-              <h2 class="section-title">Для чего Вам нужеш щебень?</h2>
+              <h2 class="section-title">Выберите задачу,  для решения которой Вам нужен щебень и наш онлайн сервис рассчитает необходимый объем и фракцию. </h2>
 
             </div>
           </div> <!-- /.row -->
@@ -616,19 +616,20 @@
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                  <li role="presentation" class="active"><a href="#secure" aria-controls="secure" role="tab" data-toggle="tab">Фундамент</a></li>
-                  <li role="presentation"><a href="#trackable" aria-controls="trackable" role="tab" data-toggle="tab"></i> Ямы</a></li>
-                  <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab"> Дорога</a></li>
-
+                  <li role="presentation" class="active"><a href="#found" aria-controls="secure" role="tab" data-toggle="tab">Щебень для фундамента</a></li>
+                  <li role="presentation"><a href="#trackable" aria-controls="trackable" role="tab" data-toggle="tab"></i>Засыпка парковочного места</a></li>
+                  <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab">Засыпка ям</a></li>
+                  <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab">Отсыпки дорог</a></li>
+                  <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab">Другое</a></li>
                 </ul>
 
                 <!-- Tab panes -->
                 <div class="tab-content">
-                  <div role="tabpanel" class="tab-pane active fade in" id="secure">
+                  <div role="tabpanel" class="tab-pane active fade in" id="found">
                     <div class="css-tab-content">
                       <div class="row">
                         <div class="col-md-6">
-                          <img src="img/secure.png" alt="">
+                          <img src="img/з-фундамент.jpg" alt="">
                         </div><!-- /.col-md-6 -->
 
                         <div class="col-md-6 content-text">
@@ -755,59 +756,28 @@
               <div class="modal-content">
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                  <h3 class="modal-title" id="quoteModalLabel">Request a rate for the shipping of your goods.</h3>
+                  <h3 class="modal-title" id="quoteModalLabel">Не знаете какой щебень Вам нужен? Отправте заявку и наши специалисты проконсультируют Вас!</h3>
                 </div>
                 <div class="modal-body">
                   <form id="contactForm" action="sendemail.php" method="POST">
                     <div class="row">
-                      <div class="col-md-6">
+
                         <div class="form-group">
-                          <label for="name">Name</label>
-                          <input id="name" name="name" type="text" class="form-control"  required="" placeholder="">
+                          <label for="contactName">Как вас зовут?</label>
+                          <input id="contactName" name="name" type="text" class="form-control"  required="" placeholder="">
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="row">
                         <div class="form-group">
-                          <label for="company">Company Name</label>
-                          <input id="company" name="company" type="text" class="form-control" placeholder="">
+                          <label for="contactPhone">Телефон*</label>
+                          <input id="contactPhone" name="company" type="text" class="form-control" placeholder="">
                         </div>
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="phone">Phone Number</label>
-                          <input id="phone" name="phone" type="text" class="form-control" placeholder="">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="email">Email address</label>
-                          <input id="email" name="email" type="email" class="form-control" required="" placeholder="">
-                        </div>
-                      </div>
+
+                    <div class="form-group submit-btn pagination-centered text-center">
+                      <button type="submit" class="btn btn-primary" style="width: 100%">Отправить заявку!</button>
                     </div>
 
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="city">City Name</label>
-                          <input id="city" name="city" type="text" class="form-control" placeholder="">
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="form-group">
-                          <label for="subject">Subject</label>
-                          <input id="subject" name="subject" type="text" class="form-control" required="" placeholder="">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group text-area">
-                      <label for="message">Your Message</label>
-                      <textarea id="message" name="message" class="form-control" rows="6" required="" placeholder=""></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Send Message</button>
                   </form>
                 </div>
               </div>
@@ -822,70 +792,43 @@
       <section class="footer-widget-section section-padding">
         <div class="container">
           <div class="row">
-            <div class="col-md-3 col-md-offset-1 col-sm-4">
+            <div class="col-md-5 col-sm-4">
               <div class="footer-widget">
-                <h3>Place &amp; Contact</h3>
+                <h3>Юридический адресс</h3>
 
                 <address>
-                  384 Maple Circle<br>
-                  Simi Valley, Nevada 47424<br>
+                  601966, Россия, Владимирская обл.<br>
+                  Ковровский район,Мелехово<br>
+                  улица Первомайская, 92<br>
 
-                  <!-- Google Map Modal Trigger -->
-                  <button type="button" class="modal-map" data-toggle="modal" data-target="#cssMapModal">Location  Map</button>
-
-                  <span class="tel">(554) 616-9926</span>
                 </address>
-
-
-                <!-- Modal -->
-                <div class="modal fade" id="cssMapModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Our Location</h4>
-                      </div>
-                      <div class="modal-body">
-
-                        <div id="googleMap"></div>
-
-                      </div>
-                    </div><!-- /.modal-content -->
-                  </div><!-- /.modal-dialog -->
-                </div><!-- End Modal -->
-              </div><!-- /.footer-widget -->
-            </div><!-- /.col-md-4 -->
-
-            <div class="col-md-3 col-sm-4">
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-3">
               <div class="footer-widget">
-                <h3>About Transport</h3>
+                <h3>График Работы</h3>
+                <p>
+                  Ежедневно по рабочим дням с 8:00 до 17:00<br>
+                  Отгрузка готовой продукции осуществляется до 23:00
+                </p>
 
-                <ul>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="service.html">Service</a></li>
-                  <li><a href="our-people.html">Our people</a></li>
-                  <li><a href="career.html">Career</a></li>
-                  <li><a href="faq.html">FAQ Page</a></li>
-                </ul>
               </div><!-- /.footer-widget -->
             </div><!-- /.col-md-4 -->
 
             <div class="col-md-4 col-sm-4">
               <div class="footer-widget">
-                <h3>Stay in Touch</h3>
-                <p>Enter your email address to receive news &amp; offers from us</p>
-
-                <form class="newsletter-form">
-                  <div class="form-group">
-                    <label class="sr-only" for="InputEmail1">Email address</label>
-                    <input type="email" class="form-control" id="InputEmail1" placeholder="Your email address">
-                    <button type="submit" class="">Send &nbsp;<i class="fa fa-angle-right"></i></button>
-                  </div>
-                </form>
+                <h3 class="text-center">Контакты</h3>
+                <p class="text-center">
+                  Телефон:(49232) 7-86-75<br>
+                  Факс:(49232) 7-83-74<br>
+                  E-mail: info@kovrovskoe.ru
+                </p>
+              </div>
               </div><!-- /.footer-widget -->
-            </div><!-- /.col-md-4 -->
+              </div>
+
           </div><!-- /.row -->
-        </div><!-- /.container -->
+        <!-- /.container -->
       </section><!-- /.cta-section -->
       <!-- footer-widget-section end -->
 
