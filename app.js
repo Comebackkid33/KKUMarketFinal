@@ -87,7 +87,7 @@ function searchCt(count,city, myArray){
 app.post('/make_bag_price', function(req, res) {
 
     var r = req.body;
-    var price = countSumBag(r.bagPrice[0],r.bagPrice[1])
+    var price = countSumBag(r.bagPrice[0],r.bagPrice[1]);
 
     var mailOptions = {
         from: 'KovrovKuBot@gmail.com',
