@@ -49,13 +49,25 @@ $(document).ready(function () {
         if(!isNaN(resValue)){
             slide('bag');
 
+
             $('#bagInputCount').val(Math.ceil(resValue/0.05));
 
             if(resId === "resFun"){
                 setSelect("bagInputFraction","5(3) - 20 мм М400")
+                var data = {
+                    Fraction: $('#bagInputFraction option:selected').val(),
+                    Count: $('#bagInputCount').val()
+                };
+                sendBagPost(data);
             }
             if(resId === "resPar"){
                 setSelect("bagInputFraction","20 - 40 мм М400")
+                var data = {
+                    Fraction: $('#stackInputFraction option:selected').val(),
+                    City:  $('#stackInputAddress option:selected').val(),
+                    Count: $('#stackInputCount').val()
+                };
+                sendStackPost(data);
             }
 
         }
@@ -91,6 +103,7 @@ $(document).ready(function () {
                 setSelect("stackInputFraction","20 - 40 мм М400")
             }
             $('#stackInputCount').val(resValue);
+
         }
         else{
             alert("Введите параметры для расчета");
@@ -142,3 +155,70 @@ $(document).ready(function () {
         }
     });
 });
+// получени цены заказа мешков
+
+$(document).ready(function () {
+    $('[name=bagPrice]').change(function() {
+
+        var data = {
+            Fraction: $('#bagInputFraction option:selected').val(),
+            Count: $('#bagInputCount').val()
+        };
+        sendBagPost(data);
+    });
+
+});
+
+function sendBagPost(data){
+
+    $.ajax({
+        url: "/bag_price",
+        type: "POST",
+        data:  JSON.stringify(data) ,
+        contentType: "application/json",
+        cache: false,
+        success: function(data) {
+
+            $('#resBag').text(data+" руб.")
+
+        },
+
+        error: function() {
+            alert('заполните остальные поля!');
+        }
+    });
+}
+
+//изменение навала
+$(document).ready(function () {
+    $('[name=stackPrice]').change(function() {
+
+        var data = {
+            Fraction: $('#stackInputFraction option:selected').val(),
+            City:  $('#stackInputAddress option:selected').val(),
+            Count: $('#stackInputCount').val()
+        };
+        sendStackPost(data);
+    });
+
+});
+
+function sendStackPost(data){
+
+    $.ajax({
+        url: "/stack_price",
+        type: "POST",
+        data:  JSON.stringify(data) ,
+        contentType: "application/json",
+        cache: false,
+        success: function(data) {
+
+            $('#resStack').text(data+" руб.")
+
+        },
+
+        error: function() {
+            alert('заполните остальные поля!');
+        }
+    });
+}
