@@ -22,13 +22,18 @@ $(document).ready(function () {
 
         if ($("#lengthFun").val() != 0 && $("#widthFun").val() != 0 && $("#heightFun").val() != 0) {
 
-            var totalAmount = $('#lengthFun').val() * $('#widthFun').val() * $('#heightFun').val() * 0.35 * 0.0001 * 1.3;
+            var totalAmount = $('#lengthFun').val() * $('#widthFun').val() * $('#heightFun').val() * 0.3  * 1.3;
+            totalAmount = totalAmount + 0.15*totalAmount;
 
             if (isNaN(totalAmount)){
+                $('#resFun').css('color', 'red');
+                $('#fractionFun').hide();
                 $('#resFun').text('Некорректный ввод!');
             }
             else{
+                $('#resFun').css('color', 'black');
                 $('#resFun').text(Number((totalAmount).toFixed(2)));
+                $('#fractionFun').show();
             }
 
         }
@@ -43,7 +48,16 @@ $(document).ready(function () {
         var resValue = $('#'+resId).text();
         if(!isNaN(resValue)){
             slide('bag');
+
             $('#bagInputCount').val(Math.ceil(resValue/0.05));
+
+            if(resId === "resFun"){
+                setSelect("bagInputFraction","5(3) - 20 мм М400")
+            }
+            if(resId === "resPar"){
+                setSelect("bagInputFraction","20 - 40 мм М400")
+            }
+
         }
         else{
             alert("Введите параметры для расчета");
@@ -52,11 +66,16 @@ $(document).ready(function () {
     })
 });
 
+function setSelect(id,fraction){
+    $("#"+id).val(fraction);
+}
+
+
 function getResId( id ){
     id = id.substr(id.length - 3);
     return $('#res'+id).attr('id');
 }
-
+//для заказа кучи
 $(document).ready(function () {
     $('.sendStackBtn').click(function () {
 
@@ -64,11 +83,62 @@ $(document).ready(function () {
         var resValue = $('#'+resId).text();
         if(!isNaN(resValue)){
             slide('stack');
-            $('#stackInputCount').val(resValue/0.05);
+
+            if(resId === "resFun"){
+                setSelect("stackInputFraction","5(3) - 20 мм М400")
+            }
+            if(resId === "resPar"){
+                setSelect("stackInputFraction","20 - 40 мм М400")
+            }
+            $('#stackInputCount').val(resValue);
         }
         else{
             alert("Введите параметры для расчета");
         }
 
     })
+});
+
+//расчет парковочного места
+$(document).ready(function () {
+    $('input[name=dem]').change(function () {
+
+        if ($("#lengthPar").val() != 0 && $("#widthPar").val() != 0 && $("#heightPar").val() != 0) {
+
+            var totalAmount = $('#lengthPar').val() * $('#widthPar').val() * $('#heightPar').val() * 1.3;
+            totalAmount = totalAmount + 0.15 * totalAmount;
+
+            if (isNaN(totalAmount)){
+                $('#resPar').css('color', 'red');
+                $('#resPar').text('Некорректный ввод!');
+            }
+            else{
+                $('#resPar').css('color', 'black');
+                $('#resPar').text(Number((totalAmount).toFixed(2)));
+            }
+
+        }
+    });
+});
+
+//расчет дороги
+$(document).ready(function () {
+    $('input[name=dem]').change(function () {
+
+        if ($("#lengthRod").val() != 0 && $("#widthRod").val() != 0 && $("#heightRod").val() != 0) {
+
+            var totalAmount = $('#lengthRod').val() * $('#widthRod').val() * $('#heightRod').val() * 1.3;
+            totalAmount = totalAmount + 0.15 * totalAmount;
+
+            if (isNaN(totalAmount)){
+                $('#resRod').css('color', 'red');
+                $('#resRod').text('Некорректный ввод!');
+            }
+            else{
+                $('#resRod').css('color', 'black');
+                $('#resRod').text(Number((totalAmount).toFixed(2)));
+            }
+
+        }
+    });
 });

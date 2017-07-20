@@ -455,7 +455,7 @@
                     <div class="form-group">
                       <label for="bagInputFraction">Выберите фракцию</label>
                       <select class="form-control" id="bagInputFraction" >
-                        <option value="5 (3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
+                        <option value="5(3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
                         <option value="20 - 40 мм М400">фракция 20 - 40мм М400</option>
                         <option value="40 - 70мм М400">фракция 40 - 70мм М400</option>
                         <option value="5(3) - 10мм М300">фракция 5(3) - 10мм М300</option>
@@ -543,7 +543,7 @@
                     <div class="form-group">
                       <label for="stackInputFraction">Выберите фракцию</label>
                       <select class="form-control" id="stackInputFraction" >
-                        <option value="5 (3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
+                        <option value="5(3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
                         <option value="20 - 40 мм М400">фракция 20 - 40мм М400</option>
                         <option value="40 - 70мм М400">фракция 40 - 70мм М400</option>
                         <option value="5(3) - 10мм М300">фракция 5(3) - 10мм М300</option>
@@ -618,8 +618,7 @@
                 <ul class="nav nav-tabs" role="tablist">
                   <li role="presentation" class="active"><a href="#found" aria-controls="secure" role="tab" data-toggle="tab">Щебень для фундамента</a></li>
                   <li role="presentation"><a href="#park" aria-controls="park" role="tab" data-toggle="tab"></i>Засыпка парковочного места</a></li>
-                  <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab">Засыпка ям</a></li>
-                  <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab">Отсыпки дорог</a></li>
+                  <li role="presentation"><a href="#road" aria-controls="road" role="tab" data-toggle="tab">Отсыпки дорог</a></li>
                   <li role="presentation"><a href="#fast" aria-controls="fast" role="tab" data-toggle="tab">Другое</a></li>
                 </ul>
 
@@ -637,8 +636,9 @@
                           <div class ="container-fluid ">
                             <div class = "row " >
                               <h4>Введите размеры монолитного фундамента:</h4>
+                              <p > Для возведения монолитного фундамента рекомендуют использовать щебень фракции 5-20мм марки М400 </p>
                               <div class="col-lg-3">
-                                <label for="lengthFun">Длина, см</label>
+                                <label for="lengthFun">Длина, м</label>
                               </div>
                               <div class = "col-lg-9">
                                 <input type="text"   class="form-control" name="dem"  id="lengthFun">
@@ -647,7 +647,7 @@
 
                             <div class = "row " >
                               <div class="col-lg-3">
-                                <label for="widthFun">Ширина, cм</label>
+                                <label for="widthFun">Ширина, м</label>
                               </div>
                               <div class = "col-lg-9">
                                 <input type="text" name="dem" class="form-control" id="widthFun">
@@ -656,7 +656,7 @@
 
                             <div class = "row " >
                               <div class="col-lg-3">
-                                <label for="heightFun">Высота, cм</label>
+                                <label for="heightFun">Высота, м</label>
                               </div>
                               <div class = "col-lg-9">
                                 <input type="text" name="dem" class="form-control" id="heightFun">
@@ -669,6 +669,7 @@
                               </div>
                               <div class = "col-lg-6">
                                 <p id="resFun"  style="color: red" >Заполните все поля</p>
+
                               </div>
                             </div>
                             <div class = "row pagination-centered text-center"  >
@@ -690,15 +691,16 @@
                     <div class="css-tab-content">
                       <div class="row">
                         <div class="col-md-6">
-                          <img src="img/track.png" alt="">
+                          <img src="img/з-парковочное место.jpg" alt="">
                         </div><!-- /.col-md-6 -->
 
                         <div class="col-md-6 content-text">
                           <div class ="container-fluid ">
                             <div class = "row " >
                               <h4>Введите размеры парковочного места:</h4>
+                              <p > Для засыпки парковочного места рекомендуют использовать щебень фракции 20-40 мм марки М400 </p>
                               <div class="col-lg-3">
-                                <label for="lengthPar">Длина, см</label>
+                                <label for="lengthPar">Длина, м</label>
                               </div>
                               <div class = "col-lg-9">
                                 <input type="text"   class="form-control" name="dem"  id="lengthPar">
@@ -707,7 +709,7 @@
 
                             <div class = "row " >
                               <div class="col-lg-3">
-                                <label for="widthPar">Ширина, cм</label>
+                                <label for="widthPar">Ширина, м</label>
                               </div>
                               <div class = "col-lg-9">
                                 <input type="text" name="dem" class="form-control" id="widthPar">
@@ -716,7 +718,7 @@
 
                             <div class = "row " >
                               <div class="col-lg-3">
-                                <label for="heightPar">Высота, cм</label>
+                                <label for="heightPar">Высота, м</label>
                               </div>
                               <div class = "col-lg-9">
                                 <input type="text" name="dem" class="form-control" id="heightPar">
@@ -744,36 +746,103 @@
                       </div><!-- /.row -->
                     </div><!-- /.css-tab-content -->
                   </div>
-                  <div role="tabpanel" class="tab-pane fade" id="fast">
+
+                  <div role="tabpanel" class="tab-pane fade" id="road">
                     <div class="css-tab-content">
                       <div class="row">
                         <div class="col-md-6">
-                          <img src="img/fast.png" alt="">
+                          <img src="img/з-отсыпка дорог.jpg" alt="">
                         </div><!-- /.col-md-6 -->
 
                         <div class="col-md-6 content-text">
-                          <h3>Continually disintermediate</h3>
+                          <div class ="container-fluid ">
+                            <div class = "row " >
+                              <h4>Введите размеры дороги:</h4>
+                              <p > Для отсыпки дороги можно использовать любую подходящую Вам фракцию </p>
+                              <div class="col-lg-3">
+                                <label for="lengthRod">Длина, м</label>
+                              </div>
+                              <div class = "col-lg-9">
+                                <input type="text"   class="form-control" name="dem"  id="lengthRod">
+                              </div>
+                            </div>
 
-                          <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                            <div class = "row " >
+                              <div class="col-lg-3">
+                                <label for="widthRod">Ширина, м</label>
+                              </div>
+                              <div class = "col-lg-9">
+                                <input type="text" name="dem" class="form-control" id="widthRod">
+                              </div>
+                            </div>
 
-                          <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                            <div class = "row " >
+                              <div class="col-lg-3">
+                                <label for="heightRod">Высота, м</label>
+                              </div>
+                              <div class = "col-lg-9">
+                                <input type="text" name="dem" class="form-control" id="heightRod">
+                              </div>
+                            </div>
+
+                            <div class = "row " style="padding-top: 10px;" >
+                              <div class="col-lg-6">
+                                <label ><b>Всего Вам потребуется, т </b></label>
+                              </div>
+                              <div class = "col-lg-6">
+                                <p id="resRod" style="color: red" >Заполните все поля</p>
+                              </div>
+                            </div>
+                            <div class = "row pagination-centered text-center"  >
+                              <div class="col-lg-6">
+                                <a  class="btn btn-primary sendBagBtn" id="sendBagBtnRod">Заказать в мешке</a>
+                              </div>
+                              <div class="col-lg-6">
+                                <a class="btn btn-primary sendStackBtn" id="sendStackBtnRod">Заказать россыпью</a>
+                              </div>
+                            </div>
+                          </div>
                         </div><!-- /.col-md-6 -->
                       </div><!-- /.row -->
                     </div><!-- /.css-tab-content -->
                   </div>
-                  <div role="tabpanel" class="tab-pane fade" id="reliable">
+                  <div role="tabpanel" class="tab-pane fade" id="fast">
                     <div class="css-tab-content">
                       <div class="row">
                         <div class="col-md-6">
-                          <img src="img/reliable.png" alt="">
+                          <p>Мы хотим сделать наш сервис еще совершеннее, чтобы каждому покупателю, которому необходим щебень, было легко и просто выбрать наилучший для себя вариант.
+                            Если из предложенных вариантов задач, для которых нужен щебень вы не нашли своего, то заполните форму ниже и в течение 10 минут с Вами свяжется наш менеджер для подробной консультации.
+                          </p>
                         </div><!-- /.col-md-6 -->
 
                         <div class="col-md-6 content-text">
-                          <h3>Continually disintermediate</h3>
+                          <form id="contactForm" action="sendemail.php" method="POST">
+                            <div class="row">
 
-                          <p>Credibly build virtual materials for fully researched paradigms. Authoritatively plagiarize long-term high-impact infomediaries with goal-oriented core competencies. Conveniently visualize process-centric applications through leading-edge testing procedures. Quickly build backend customer service for real-time metrics.</p>
+                              <div class="form-group">
+                                <label for="contactName">Как вас зовут?</label>
+                                <input id="contactName" name="name" type="text" class="form-control"  required="" placeholder="">
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="form-group">
+                                <label for="contactPhone">Телефон*</label>
+                                <input id="contactPhone" name="company" type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>
 
-                          <p>Efficiently transform an expanded array of methodologies rather than customized infomediaries.</p>
+                            <div class="row">
+                              <div class="form-group">
+                                <label for="cause">Для чего вам нужен щебень:</label>
+                                <input id="cause" name="company" type="text" class="form-control" placeholder="">
+                              </div>
+                            </div>
+
+                            <div class="form-group submit-btn pagination-centered text-center">
+                              <button type="submit" class="btn btn-primary" style="width: 100%">Отправить заявку!</button>
+                            </div>
+
+                          </form>
                         </div><!-- /.col-md-6 -->
                       </div><!-- /.row -->
                     </div><!-- /.css-tab-content -->
