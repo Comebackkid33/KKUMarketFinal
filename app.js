@@ -110,7 +110,7 @@ app.post('/make_bag_price', function(req, res) {
 function countSumBag(fr,count){
 
     var fs = require('fs');
-    var prices = JSON.parse(frJson);
+    var prices = frJson;
 
     var resObj = searchFr(fr, prices);
     var result = Number((count * resObj).toFixed(2));
