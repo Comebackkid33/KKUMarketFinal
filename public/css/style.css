@@ -200,12 +200,12 @@ OUR SERVICES SECTION
   content: "";
   background: #3b2b6a;
   background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJod…BoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
-  background: -moz-linear-gradient(left, #3b2b6a 0%, #307c95 100%, #7db9e8 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3B2B6A), color-stop(100%,#307c95), color-stop(100%,#7db9e8));
-  background: -webkit-linear-gradient(left, #3b2b6a 0%,#307c95 100%,#7db9e8 100%);
-  background: -o-linear-gradient(left, #3b2b6a 0%,#307c95 100%,#7db9e8 100%);
-  background: -ms-linear-gradient(left, #3b2b6a 0%,#307c95 100%,#7db9e8 100%);
-  background: linear-gradient(to right, rgba(59, 43, 106, 0.6) 0%,rgba(48, 124, 149, 0.6) 100%,rgba(125, 185, 232, 0.6) 100%);
+  background: -moz-linear-gradient(left, rgba(106, 100, 98, 0.69) 0%,  rgba(106, 100, 98, 0.69)100%,  rgba(106, 100, 98, 0.69)100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(106, 100, 98, 0.69)), color-stop(100%, rgba(106, 100, 98, 0.69)), color-stop(100%, rgba(106, 100, 98, 0.69)));
+  background: -webkit-linear-gradient(left,  rgba(106, 100, 98, 0.69) 0%, rgba(106, 100, 98, 0.69) 100%, rgba(106, 100, 98, 0.69) 100%);
+  background: -o-linear-gradient(left,  rgba(106, 100, 98, 0.69) 0%, rgba(106, 100, 98, 0.69) 100%, rgba(106, 100, 98, 0.69)100%);
+  background: -ms-linear-gradient(left,  rgba(106, 100, 98, 0.69) 0%, rgba(106, 100, 98, 0.69) 100%, rgba(106, 100, 98, 0.69) 100%);
+  background: linear-gradient(to right,  rgba(106, 100, 98, 0.69) 0%, rgba(106, 100, 98, 0.69) 100%, rgba(106, 100, 98, 0.69) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b2b6a', endColorstr='#7db9e8',GradientType=1 );
   position: absolute;
   top: 0;
