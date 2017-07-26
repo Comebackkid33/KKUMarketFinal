@@ -38,7 +38,31 @@ app.use('/', index);
 app.use('/users', users);
 
 
+////////////////////////////
+//support /send_report
+//////////////////////
+app.post('/send_report', function(req, res) {
 
+    var r = req.body;
+
+
+    var mailOptions = {
+        from: 'KovrovKuBot@gmail.com',
+        to: 'kurganovk@gmail.com',
+        subject: 'Новое обращение в поддержку',
+        text: ' Дата:' +  Date()+'\nКлиент: '+r.name +'\nТелефон: ' + r.phone
+
+    };
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.send('ok');
+        }
+    });
+});
 
 //получить цену на мешки
 app.post('/bag_price', function(req, res) {
@@ -155,6 +179,8 @@ function countSumStack(fr,count,city){
 
     return result.toString();
 }
+
+
 
 
 //////////////////////////////////////////////////////////////////

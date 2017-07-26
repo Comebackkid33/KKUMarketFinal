@@ -199,6 +199,27 @@ function sendBagPost(data){
     });
 }
 
+function sendSupPost(data){
+
+    $.ajax({
+        url: "/send_report",
+        type: "POST",
+        data:  JSON.stringify(data) ,
+        contentType: "application/json",
+        cache: false,
+        success: function(data) {
+
+            alert('Ваще обращение зарегестрированно!')
+
+        },
+
+        error: function() {
+            alert('заполните остальные поля!');
+        }
+    });
+}
+
+
 //изменение навала
 $(document).ready(function () {
     $('[name=stackPrice]').change(function() {

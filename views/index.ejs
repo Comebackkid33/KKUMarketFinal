@@ -58,7 +58,43 @@
     <div class="st-content">
       <header class="header">
 
+        <nav class="top-bar">
+          <div class="overlay-bg">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-3 ">
+                  <div class="call-to-action">
+                    <ul class="list-inline">
+                      <li><a href="#"><i class="fa fa-phone"></i>  +7 (919) 000 8 000</a></li>
+                      <li><a href="#"><i class="fa fa-envelope"></i> Sales@kovrovskoe.ru</a></li>
+                    </ul>
+                  </div><!-- /.call-to-action -->
 
+                </div><!-- /.col-sm-6 -->
+                  <div class="col-sm-6 col-xs-12">
+                      <div class="topbar-right">
+                          <div class="lang-support pull-right">
+                              <p class="text-center" style="color: white">Известняковый щебень от производителя</p>
+
+                          </div>
+
+
+                      </div><!-- /.social-links -->
+                  </div>
+                <div class="col-sm-3 hidden-xs">
+                  <div class="topbar-right">
+                    <div class="lang-support pull-right">
+
+                      <a data-toggle="modal" data-target="#quoteModal" href="#" class="btn-sm btn-primary иет">Получить консультацию</a>
+                    </div>
+
+
+                  </div><!-- /.social-links -->
+                </div><!-- /.col-sm-6 -->
+              </div><!-- /.row -->
+            </div><!-- /.container -->
+          </div><!-- /.overlay-bg -->
+        </nav><!-- /.top-bar -->
         <nav class="navbar navbar-default" role="navigation">
 
           <div class="container mainnav">
@@ -1006,7 +1042,7 @@
                   <h3 class="modal-title text-center" id="quoteModalLabel" >Не знаете какой щебень Вам нужен? Отправте заявку и наши специалисты проконсультируют Вас!</h3>
                 </div>
                 <div class="modal-body">
-                  <form id="contactForm" action="sendemail.php" method="POST" style = "width: 300px; margin: 0 auto;">
+                  <form id="contactForm"  style = "width: 300px; margin: 0 auto;">
                     <div class="row">
 
                         <div class="form-group">
@@ -1017,16 +1053,30 @@
                       <div class="row">
                         <div class="form-group">
                           <label for="contactPhone">Телефон*</label>
-                          <input id="contactPhone" name="company" type="text" class="form-control" placeholder="">
+                          <input id="contactPhone" name="phone" type="text" class="form-control" placeholder="">
                         </div>
                       </div>
 
                     <div class="form-group submit-btn pagination-centered text-center">
-                      <button type="submit" class="btn btn-primary" style="width: 100%">Отправить заявку!</button>
+                      <button type="submit" class="btn btn-primary" id = "contactSubmit"style="width: 100%">Отправить заявку!</button>
                       <h6 class = "text-center">Нажимая кнопку, вы даете согласие на обработку <a data-toggle="modal" data-target="#lawModal" data-dismiss="modal" href="#">персональных данных</a></h6>
                     </div>
 
                   </form>
+
+                  <script>
+                      $(function() {
+                          $('#contactSubmit').click(function(event) {
+                              event.preventDefault(); // Stops browser from navigating away from page
+                              var data = {
+                                  name: $('#contactName').val(),
+                                  phone: $('#contactPhone').val()
+                              };
+                              // build a json object or do something with the form, store in data
+                              sendSupPost(data);
+                          });
+                      });
+                  </script>
                 </div>
               </div>
             </div>
