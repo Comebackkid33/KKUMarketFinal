@@ -47,7 +47,7 @@ $(document).ready(function () {
         var resId = getResId($(this).attr('id'));
         var resValue = $('#'+resId).text();
         if(!isNaN(resValue)){
-            slide('bag');
+            $("#bagModal").modal();
 
 
             $('#bagInputCount').val(Math.ceil(resValue/0.05));
@@ -63,11 +63,10 @@ $(document).ready(function () {
             if(resId === "resPar"){
                 setSelect("bagInputFraction","20 - 40 мм М400")
                 var data = {
-                    Fraction: $('#stackInputFraction option:selected').val(),
-                    City:  $('#stackInputAddress option:selected').val(),
-                    Count: $('#stackInputCount').val()
+                    Fraction: $('#bagInputFraction option:selected').val(),
+                    Count: $('#bagInputCount').val()
                 };
-                sendStackPost(data);
+                sendBagPost(data);
             }
 
         }
@@ -94,16 +93,27 @@ $(document).ready(function () {
         var resId = getResId($(this).attr('id'));
         var resValue = $('#'+resId).text();
         if(!isNaN(resValue)){
-            slide('stack');
+            $("#stackModal").modal();
+            $('#stackInputCount').val(resValue);
 
             if(resId === "resFun"){
                 setSelect("stackInputFraction","5(3) - 20 мм М400")
+                var data = {
+                    Fraction: $('#stackInputFraction option:selected').val(),
+                    City:  $('#stackInputAddress option:selected').val(),
+                    Count: $('#stackInputCount').val()
+                };
+                sendStackPost(data);
             }
             if(resId === "resPar"){
                 setSelect("stackInputFraction","20 - 40 мм М400")
+                var data = {
+                    Fraction: $('#stackInputFraction option:selected').val(),
+                    City:  $('#stackInputAddress option:selected').val(),
+                    Count: $('#stackInputCount').val()
+                };
+                sendStackPost(data);
             }
-            $('#stackInputCount').val(resValue);
-
         }
         else{
             alert("Введите параметры для расчета");

@@ -413,9 +413,15 @@
           <div class="row">
             <h2 style="background: #ebefee; color: #606676" class="text-center"><b >Продаем щебень в мешках для строительных работ и благоустройства территорий</b> </h2>
 
-            <div class="col-md-5">
+            <div class="col-md-6">
               <img src="img/щебень-в-мешках.jpg" alt="">
-              <h4>Щебень в мешках это -
+
+
+            </div><!-- /.col-md-6 -->
+
+            <div class="col-md-6 content-text">
+              <h3>Оформите online заказ на нашем сайте прямо сейчас!</h3>
+              <h4 >Щебень в мешках это -
                 <br><span class="glyphicon glyphicon-ok"></span>	Чистота на участке
                 <br><span class="glyphicon glyphicon-ok"></span>	Отсутствие потерь от хранения на земле
                 <br><span class="glyphicon glyphicon-ok"></span>	Всегда точный объем и масса
@@ -424,71 +430,8 @@
                 <br><span class="glyphicon glyphicon-ok"></span>	Гарантия качества товара
               </h4>
 
-            </div><!-- /.col-md-6 -->
 
-            <div class="col-md-7 content-text">
-              <h3>Оформите online заказ на нашем сайте прямо сейчас!</h3>
-              <p>Заполните форму и в течении 10 минут с Вами свяжется наш менеджер для подтверждения заказа.</p>
-
-              <!--send Form-->
-              <form   action = "/make_bag_price" method = "POST" id="BagForm" >
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="bagInputName">Как Вас зовут</label>
-                      <input type="text" class="form-control" name="bagName" id="bagInputName" placeholder="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="bagInputPhone">Ваш телефон*</label>
-                      <input type="text" class="form-control" id="bagInputPhone" pattern="\d+" name="bagPhone"  required="" placeholder="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="bagInputFraction">Выберите фракцию</label>
-                      <select class="form-control" name = "bagPrice" id="bagInputFraction" >
-                        <option value="5(3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
-                        <option value="20 - 40 мм М400">фракция 20 - 40мм М400</option>
-                        <option value="40 - 70мм М400">фракция 40 - 70мм М400</option>
-                        <option value="5(3) - 10мм М300">фракция 5(3) - 10мм М300</option>
-                        <option value="5(3) - 20мм М300">фракция 5(3) - 20мм М300</option>
-                        <option value="20 - 40мм М300">фракция 20 - 40мм М300</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="bagInputCount">Количество мешков по 50кг</label>
-                      <input type="text" class="form-control" name = "bagPrice" id="bagInputCount" pattern="\d+" placeholder="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row"style="display: block">
-                      <div class="col-lg-12">
-                        <label for="resBag" style="display: inline-block">Стоимость вашего заказа:</label>
-                        <p id="resBag"style="display: inline-block" >0 руб</p>
-                      </div>
-
-                </div>
-
-                <div class="form-group submit-btn pagination-centered text-center">
-                  <button type="submit" class="btn btn-primary">Оформить заказ!</button>
-                </div>
-
-
-              </form>
-
+              <a data-toggle="modal" data-target="#bagModal" href="#" class="btn btn-primary ">Заказать щебень в мешках</a>
               <p>Наши работники <b>бесплатно</b> загрузят мешки с щебнем к Вам в автомобиль. Стоимость доставки автотранспортом компании уточняйте у менеджера.</p>
 
             </div>
@@ -496,6 +439,80 @@
             </div>
 
           </div>
+
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="bagModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title text-center" id="quoteModalLabel">Заполните форму и в течении 10 минут с Вами свяжется наш менеджер для подтверждения заказа.</h3>
+              </div>
+              <div class="modal-body">
+                <!--send Form-->
+                <form   action = "/make_bag_price" method = "POST" id="BagForm"  style = "width: 300px; margin: 0 auto;">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="bagInputName">Как Вас зовут</label>
+                        <input type="text" class="form-control" name="bagName" id="bagInputName" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="bagInputPhone">Ваш телефон*</label>
+                        <input type="text" class="form-control" id="bagInputPhone" pattern="\d+" name="bagPhone"  required="" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="bagInputFraction">Выберите фракцию</label>
+                        <select class="form-control" name = "bagPrice" id="bagInputFraction" >
+                          <option value="5(3) - 20 мм М400">М «400» фракция 5-20 мм</option>
+                          <option value="20 - 40 мм М400">М «400» фракция 20-40 мм</option>
+                          <option value="5(3) - 10мм М300">М «300» фракция 5-20 мм</option>
+                          <option value="20 - 40мм М300">М «300» фракция 20-40 мм</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="bagInputCount">Количество мешков по 50кг</label>
+                        <input type="text" class="form-control" name = "bagPrice" id="bagInputCount" pattern="\d+" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row"style="display: block">
+                    <div class="col-lg-12">
+                      <label for="resBag" style="display: inline-block">Стоимость вашего заказа:</label>
+                      <p id="resBag"style="display: inline-block" >0 руб</p>
+                    </div>
+
+                  </div>
+
+                  <div class="form-group submit-btn pagination-centered text-center">
+                    <button type="submit" class="btn btn-primary">Оформить заказ!</button>
+                    <h6 class = "text-center">Нажимая кнопку, вы даете согласие на обработку <a data-toggle="modal" data-target="#lawModal" href="#">персональных данных</a></h6>
+                  </div>
+
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
       <!-- featuer-section end -->
       <section class="feature-section section-padding" style="background:white; color: #606676" id="stack">
@@ -510,88 +527,101 @@
 
             <div class="col-md-6 content-text">
               <h3>Оформите online заказ на нашем сайте прямо сейчас!</h3>
-              <p>Заполните форму и в течении 10 минут с Вами свяжется наш менеджер для подтверждения заказа.</p>
-
-              <!--send Form-->
-              <form action = "/make_stack_price" method = "POST" >
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="stackInputName">Как Вас зовут</label>
-                      <input type="text" name = "stackName" class="form-control" id="stackInputName" placeholder="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="stackInputPhone">Ваш телефон*</label>
-                      <input type="text" class="form-control" name = "stackPhone" id="stackInputPhone" pattern="\d+" required="" placeholder="">
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="stackInputFraction">Выберите фракцию</label>
-                      <select class="form-control" name="stackPrice" id="stackInputFraction" >
-                        <option value="5(3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
-                        <option value="20 - 40 мм М400">фракция 20 - 40мм М400</option>
-                        <option value="40 - 70мм М400">фракция 40 - 70мм М400</option>
-                        <option value="5(3) - 10мм М300">фракция 5(3) - 10мм М300</option>
-                        <option value="5(3) - 20мм М300">фракция 5(3) - 20мм М300</option>
-                        <option value="20 - 40мм М300">фракция 20 - 40мм М300</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="stackInputCount">Количество тонн</label>
-                      <input type="text" class="form-control" name="stackPrice" id="stackInputCount" placeholder="" pattern="\d+">
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <label for="stackInputAddress">Выберите адрес доставки</label>
-                      <select class="form-control" name="stackPrice" id="stackInputAddress" >
-                          <% for(var i=0; i<Cities.length; i++) {%>
-                            <option><%= Cities[i].City %></option>
-                          <% } %>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-xs-12">
-                    <div class="form-group">
-                      <div class="col-lg-7">
-                        <label for="resStack">Стоимость вашего заказа составляет:</label>
-                      </div>
-                      <div class="col-lg-5">
-                        <p id="resStack" >0 руб.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="form-group submit-btn pagination-centered text-center">
-                  <button type="submit" class="btn btn-primary">Оформить заказ!</button>
-                </div>
-
-
-              </form>
-
+              <a data-toggle="modal" data-target="#stackModal" href="#" class="btn btn-primary ">Заказать щебень навалом</a>
             </div>
 
           </div>
 
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="stackModal" tabindex="-1" role="dialog" aria-labelledby="stackModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title text-center" id="stackModalLabel">Заполните форму и в течении 10 минут с Вами свяжется наш менеджер для подтверждения заказа.</h3>
+              </div>
+              <div class="modal-body">
+                <!--send Form-->
+                <form action = "/make_stack_price" method = "POST"  style = "width: 300px; margin: 0 auto;">
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="stackInputName">Как Вас зовут</label>
+                        <input type="text" name = "stackName" class="form-control" id="stackInputName" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="stackInputPhone">Ваш телефон*</label>
+                        <input type="text" class="form-control" name = "stackPhone" id="stackInputPhone" pattern="\d+" required="" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="stackInputFraction">Выберите фракцию</label>
+                        <select class="form-control" name="stackPrice" id="stackInputFraction" >
+                          <option value="5(3) - 20 мм М400">фракция 5(3) - 20мм М400</option>
+                          <option value="20 - 40 мм М400">фракция 20 - 40мм М400</option>
+                          <option value="40 - 70мм М400">фракция 40 - 70мм М400</option>
+                          <option value="5(3) - 10мм М300">фракция 5(3) - 10мм М300</option>
+                          <option value="5(3) - 20мм М300">фракция 5(3) - 20мм М300</option>
+                          <option value="20 - 40мм М300">фракция 20 - 40мм М300</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="stackInputCount">Количество тонн</label>
+                        <input type="text" class="form-control" name="stackPrice" id="stackInputCount" placeholder="" pattern="\d+">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <div class="form-group">
+                        <label for="stackInputAddress">Выберите адрес доставки</label>
+                        <select class="form-control" name="stackPrice" id="stackInputAddress" >
+                            <% for(var i=0; i<Cities.length; i++) {%>
+                          <option><%= Cities[i].City %></option>
+                            <% } %>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xs-12" style="display: block">
+
+
+                          <label for="resStack" style="display:inline-block">Стоимость вашего заказа:</label>
+
+
+                          <p id="resStack" style="display:inline-block">0 руб.</p>
+
+
+                    </div>
+                  </div>
+
+                  <div class="form-group submit-btn pagination-centered text-center">
+                    <button type="submit" class="btn btn-primary">Оформить заказ!</button>
+                    <h6 class = "text-center">Нажимая кнопку, вы даете согласие на обработку <a data-toggle="modal" data-target="#lawModal" href="#">персональных данных</a></h6>
+                  </div>
+
+
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <!-- why-us-setion start -->
@@ -849,9 +879,58 @@
         </div><!-- /.container -->
       </section>
 
+      <!-- Modal права -->
+
+      <div class="modal fade" id="lawModal" tabindex="-1" role="dialog" aria-labelledby="quoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h3 class="modal-title" id="lawModal">Политика конфиденциальности</h3>
+            </div>
+            <div class="modal-body">
+             <p>Политика Конфиденциальности(далее или Администрация) обязуется сохранять Вашу конфиденциальность в сети Интернет. Настоящая Политика Конфиденциальности, рассказывает о том, как собираются, обрабатываются и хранятся Ваши личные данные. Администрация уделяет большое внимание защите личной информации пользователей. Пользуюсь сайтом , пользователь тем самым дает согласие на применение правил сбора и использования данных, изложенных в настоящем документе.
+              Если Вы не согласны с условиями нашей политики конфиденциальности, не используйте сайт !
+             </p>
+              <p>
+              Собираемая информация
+              Администрация сайта может собирать следующую информацию о пользователях сайта:
+                <br> - Фамилия, Имя, Отчество
+                <br> - Адрес электронной почты
+                <br> - Номер телефона
+                <br> - Прочая информация
+              </p>
+              <p>
+              Использование информации
+              Ниже описаны некоторые способы использования личной информации пользователя:
+                <br> - для внутреннего отчета
+                <br> - для предоставления информации и услуг, которые запрашивает пользователь
+                <br> - для ответа на запросы пользователя
+                <br> - для улучшения качества продуктов сайта
+                <br> - для улучшения качества предоставления услуг
+                <br> - для решения различного рода споров
+                <br> - для мониторинга работы сайта
+                <br> - для отправки различной электронной корреспонденции
+                <br> - для проведения опросов
+                <br> - для формирования статистических данных
+              </p>
+              <p>
+              Раскрытие информации
+              Администрация не продает личные данные пользователя и не передает их третьим лицам без согласия на то пользователя.
+              Далее, описаны некоторые случаи передачи личной информации пользователя:
+
+                <br> - для беспрепятственного предоставления услуг третьими лицами с разрешения пользователя
+
+                <br> - в случаях, если это требуется органам спецслужб или если это требует законодательство
 
 
-
+                <br> Прочая информация
+              Дети любых возрастов могут беспрепятственно пользоваться данным сайтом.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
       <!-- cta start -->

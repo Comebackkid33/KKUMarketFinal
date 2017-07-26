@@ -59,7 +59,7 @@ app.post('/stack_price', function(req, res) {
 function searchFr(fraction, myArray){
     for (var i=0; i < myArray.length; i++) {
         if (myArray[i].Fraction === fraction) {
-            return myArray[i].Price;
+            return myArray[i];
         }
     }
 }
@@ -110,11 +110,11 @@ app.post('/make_bag_price', function(req, res) {
 function countSumBag(fr,count){
 
     var fs = require('fs');
-    var prices =   JSON.parse(fs.readFileSync('./public/JSON/Prices.JSON', 'utf8'));
-   // var prices = frJson;
+    var prices =   frJson;
+
 
     var resObj = searchFr(fr, prices);
-    var result = Number((count * resObj).toFixed(2));
+    var result = Number((count * resObj.PriceBag).toFixed(2));
 
     return result.toString();
 }
@@ -151,7 +151,7 @@ function countSumStack(fr,count,city){
     var resObj = searchFr(fr, prices);
     var deliveryPrice = searchCt(count,city,cities);
 
-    var result = Number((count * resObj + deliveryPrice).toFixed(2));
+    var result = Number((count * resObj.Price + deliveryPrice).toFixed(2));
 
     return result.toString();
 }
@@ -183,27 +183,33 @@ module.exports = app;
 var frJson = [
     {
         Fraction: '5(3) - 20 мм М400',
-        Price: 499
+        Price: 499,
+        PriceBag: 99
     },
     {
         Fraction: '20 - 40 мм М400',
-        Price: 449
+        Price: 449,
+        PriceBag: 90
     },
     {
         Fraction: '40 - 70мм М400',
-        Price: 399
+        Price: 399,
+        PriceBag: 0
     },
     {
         Fraction: '5(3) - 10мм М300',
-        Price: 419
+        Price: 419,
+        PriceBag: 90
     },
     {
         Fraction: '5(3) - 20мм М300',
-        Price: 399
+        Price: 399,
+        PriceBag: 0
     },
     {
         Fraction: '20 - 40мм М300',
-        Price: 350
+        Price: 350,
+        PriceBag: 80
     }
 ];
 
