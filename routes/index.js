@@ -7,7 +7,8 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
 
     var fs = require('fs');
-    var Cities = city;
+    var Cities = JSON.parse(fs.readFileSync('./public/JSON/Cities.JSON', 'utf8'));
+    // var Cities = city;
     res.render('index',{title:"ККУ",Cities: Cities});
 });
 
