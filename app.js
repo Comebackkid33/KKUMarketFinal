@@ -145,11 +145,8 @@ app.post('/make_stack_price', function(req, res) {
 function countSumStack(fr,count,city){
 
     var fs = require('fs');
-
-    var prices =   JSON.parse(fs.readFileSync('./public/JSON/Prices.JSON', 'utf8'));
-    var cities =   JSON.parse(fs.readFileSync('./public/JSON/Cities.JSON', 'utf8'));
-   // var prices = frJson;
-   // var cities = cityJson;
+    var prices = frJson;
+    var cities = cityJson;
 
     var resObj = searchFr(fr, prices);
     var deliveryPrice = searchCt(count,city,cities);
