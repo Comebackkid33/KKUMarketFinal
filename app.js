@@ -110,7 +110,8 @@ app.post('/make_bag_price', function(req, res) {
 function countSumBag(fr,count){
 
     var fs = require('fs');
-    var prices = frJson;
+    var prices =   JSON.parse(fs.readFileSync('./public/JSON/Prices.JSON', 'utf8'));
+   // var prices = frJson;
 
     var resObj = searchFr(fr, prices);
     var result = Number((count * resObj).toFixed(2));
@@ -144,8 +145,11 @@ app.post('/make_stack_price', function(req, res) {
 function countSumStack(fr,count,city){
 
     var fs = require('fs');
-    var prices = frJson;
-    var cities = cityJson;
+
+    var prices =   JSON.parse(fs.readFileSync('./public/JSON/Prices.JSON', 'utf8'));
+    var cities =   JSON.parse(fs.readFileSync('./public/JSON/Cities.JSON', 'utf8'));
+   // var prices = frJson;
+   // var cities = cityJson;
 
     var resObj = searchFr(fr, prices);
     var deliveryPrice = searchCt(count,city,cities);
