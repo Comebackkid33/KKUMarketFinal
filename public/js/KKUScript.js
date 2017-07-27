@@ -33,6 +33,9 @@ $(document).ready(function () {
             else{
                 $('#resFun').css('color', 'black');
                 $('#resFun').text(Number((totalAmount).toFixed(2)));
+                $('#resFunBag').css('color', 'black');
+                $('#resFunBag').text(Math.ceil(totalAmount/0.05) + " мешков");
+
                 $('#fractionFun').show();
             }
 
@@ -138,6 +141,8 @@ $(document).ready(function () {
             else{
                 $('#resPar').css('color', 'black');
                 $('#resPar').text(Number((totalAmount).toFixed(2)));
+                $('#resParBag').css('color', 'black');
+                $('#resParBag').text(Math.ceil(totalAmount/0.05) + " мешков");
             }
 
         }
@@ -160,6 +165,9 @@ $(document).ready(function () {
             else{
                 $('#resRod').css('color', 'black');
                 $('#resRod').text(Number((totalAmount).toFixed(2)));
+                $('#resRodBag').css('color', 'black');
+                $('#resRodBag').text(Math.ceil(totalAmount/0.05) + " мешков");
+
             }
 
         }
