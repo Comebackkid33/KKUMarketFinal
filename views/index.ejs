@@ -733,7 +733,7 @@
                                 <label for="lengthFun">Длина, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text"   class="form-control" name="dem"  pattern="\d+" id="lengthFun">
+                                <input type="text"   class="form-control" name="dem" onchange="this.value = this.value.replace(/,/g, '.')"   pattern="\d+" id="lengthFun">
                               </div>
                             </div>
 
@@ -742,7 +742,7 @@
                                 <label for="widthFun">Ширина, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text" name="dem" class="form-control"  pattern="\d+" id="widthFun">
+                                <input type="text" name="dem" class="form-control" onchange="this.value = this.value.replace(/,/g, '.')"  pattern="\d+" id="widthFun">
                               </div>
                             </div>
 
@@ -751,7 +751,7 @@
                                 <label for="heightFun">Высота, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text" name="dem" class="form-control"  pattern="\d+" id="heightFun">
+                                <input type="text" name="dem" class="form-control" onchange="this.value = this.value.replace(/,/g, '.')"  pattern="\d+" id="heightFun">
                               </div>
                             </div>
 
@@ -795,7 +795,7 @@
                                 <label for="lengthPar">Длина, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text"   class="form-control" name="dem"  id="lengthPar">
+                                <input type="text"   class="form-control" name="dem" onchange="this.value = this.value.replace(/,/g, '.')"  id="lengthPar">
                               </div>
                             </div>
 
@@ -804,7 +804,7 @@
                                 <label for="widthPar">Ширина, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text" name="dem" class="form-control" id="widthPar">
+                                <input type="text" name="dem" class="form-control" onchange="this.value = this.value.replace(/,/g, '.')"  id="widthPar">
                               </div>
                             </div>
 
@@ -813,7 +813,7 @@
                                 <label for="heightPar">Высота, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text" name="dem" class="form-control" id="heightPar">
+                                <input type="text" name="dem" class="form-control" onchange="this.value = this.value.replace(/,/g, '.')"  id="heightPar">
                               </div>
                             </div>
 
@@ -856,7 +856,7 @@
                                 <label for="lengthRod">Длина, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text"   class="form-control" name="dem"  id="lengthRod">
+                                <input type="text"   class="form-control" name="dem"  onchange="this.value = this.value.replace(/,/g, '.')" id="lengthRod">
                               </div>
                             </div>
 
@@ -865,7 +865,7 @@
                                 <label for="widthRod">Ширина, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text" name="dem" class="form-control" id="widthRod">
+                                <input type="text" name="dem" class="form-control" onchange="this.value = this.value.replace(/,/g, '.')"  id="widthRod">
                               </div>
                             </div>
 
@@ -874,7 +874,7 @@
                                 <label for="heightRod">Высота, м</label>
                               </div>
                               <div class = "col-lg-9">
-                                <input type="text" name="dem" class="form-control" id="heightRod">
+                                <input type="text" name="dem" class="form-control" onchange="this.value = this.value.replace(/,/g, '.')"  id="heightRod">
                               </div>
                             </div>
 
