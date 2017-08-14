@@ -48,7 +48,7 @@ app.post('/send_report', function(req, res) {
 
     var mailOptions = {
         from: 'KovrovKuBot@gmail.com',
-        to: 'kurganovk@gmail.com',
+        to: 'Sales@kovrovskoe.ru',
         subject: 'Новое обращение в поддержку',
         text: ' Дата:' +  Date()+'\nКлиент: '+r.name +'\nТелефон: ' + r.phone
 
@@ -115,7 +115,7 @@ app.post('/make_bag_price', function(req, res) {
 
     var mailOptions = {
         from: 'KovrovKuBot@gmail.com',
-        to: 'kurganovk@gmail.com',
+        to: 'Sales@kovrovskoe.ru',
         subject: 'Новый заказ',
         text: 'Тип: Мешки \nДата:' +  Date()+'\nКлиент: '+r.bagName +'\nТелефон: ' + r.bagPhone + '\nФракция: '+ r.bagPrice[0] + '\nКоличество мешков: ' + r.bagPrice[1] +' шт.' + '\nЦена: ' + price +' руб'
 
@@ -150,7 +150,7 @@ app.post('/make_stack_price', function(req, res) {
 
     var mailOptions = {
         from: 'KovrovKuBot@gmail.com',
-        to: 'kurganovk@gmail.com',
+        to: 'Sales@kovrovskoe.ru',
         subject: 'Новый заказ',
         text: 'Тип: Навалом \nДата:' +  Date()+'\nКлиент: '+r.stackName +'\nТелефон: ' + r.stackPhone + '\nФракция: '+ r.stackPrice[0] + '\nМасса: ' + r.stackPrice[1] +' т' +'\nДоставка: '+ r.stackPrice[2] + '\nЦена: ' + price +' руб'
 
