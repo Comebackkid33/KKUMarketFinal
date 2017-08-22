@@ -235,7 +235,22 @@ var frJson = [
     {
         Fraction: '20 - 40мм М300',
         Price: 350,
-        PriceBag: 80
+        PriceBag: 0
+    },
+    {
+        Fraction: '5 - 20мм М200',
+        Price: 319,
+        PriceBag: 0
+    },
+    {
+        Fraction: '20 - 40мм М200',
+        Price: 289,
+        PriceBag: 0
+    },
+    {
+        Fraction: '40 - 70мм М200',
+        Price: 269,
+        PriceBag: 0
     }
 ];
 
